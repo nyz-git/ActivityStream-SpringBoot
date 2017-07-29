@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
 @EntityScan(basePackages={"com.stackroute.activitystream"})
 public class CircleServiceApplication {
 
