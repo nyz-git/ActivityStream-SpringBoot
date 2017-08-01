@@ -1,3 +1,7 @@
 language: java
+
 services:
   - mysql
+cache:
+  directories:
+    - '$HOME/.m2/repository'  

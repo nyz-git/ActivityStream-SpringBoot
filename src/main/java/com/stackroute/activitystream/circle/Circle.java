@@ -31,6 +31,9 @@ public class Circle {
 
 	@JsonProperty("circle_creation_date")
 	private Date circleCreationDate;
+	
+	@JsonProperty("circle_status")
+	private String circleStatus;
 
 	public int getCircleId() {
 		return circleId;
@@ -72,11 +75,23 @@ public class Circle {
 		this.circleCreationDate = new Date();
 	}
 
+	
+	public String getCircleStatus() {
+		return circleStatus;
+	}
+
+	public void setCircleStatus(String circleStatus) {
+		this.circleStatus = circleStatus;
+	}
+
 	@Override
 	public String toString() {
 		return "Circle [circleId=" + circleId + ", circleName=" + circleName + ", circleOwner=" + circleOwner
-				+ ", circleDescription=" + circleDescription + ", circleCreationDate=" + circleCreationDate + "]";
+				+ ", circleDescription=" + circleDescription + ", circleCreationDate=" + circleCreationDate
+				+ ", circleStatus=" + circleStatus + "]";
 	}
+
+	
 
 	
 }

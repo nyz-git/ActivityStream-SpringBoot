@@ -19,8 +19,8 @@ public class CircleController {
 	@RequestMapping(value = "/createcircle", method = RequestMethod.POST)
 	public ResponseEntity createCircle(@RequestBody Circle circle) {
 		try {
-			Boolean newUser = circleDAO.createCircle(circle);
-			return new ResponseEntity(newUser, HttpStatus.OK);
+			Boolean newCircle = circleDAO.createCircle(circle);
+			return new ResponseEntity(newCircle, HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);

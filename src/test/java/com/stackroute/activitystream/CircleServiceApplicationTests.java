@@ -3,11 +3,7 @@ package com.stackroute.activitystream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import java.util.Date;
 import java.util.List;
-
-import javax.validation.Validation;
-import javax.validation.ValidatorFactory;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,10 +11,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
 
 import com.stackroute.activitystream.circle.Circle;
 import com.stackroute.activitystream.circle.CircleDAO;
@@ -48,14 +42,14 @@ public class CircleServiceApplicationTests {
 		//circleDAO = new CircleDaoImpl();
 	}
 
-	//@Test
+	@Test
 	public void createCircleTest() {
 		Circle circle = new Circle();
-		// circle.setCircleId(1);
+		//circle.setCircleId(1);
 		circle.setCircleName("Bangalore");
 		circle.setCircleDescription("This circle is created");
 		circle.setCircleOwner("zaid.ansari@niit.com");
-		circle.setCircleCreationDate();
+		//circle.setCircleCreationDate();
 
 		// Hibernate Validation
 		/*ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
@@ -85,7 +79,7 @@ public class CircleServiceApplicationTests {
 		display(circle);
 	}
 
-	@Test
+	//@Test
 	public void getCircleByName() {
 		circle = circleDAO.getCircleByName("VEG");
 		assertNotNull(circle);

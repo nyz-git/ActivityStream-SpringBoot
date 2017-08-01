@@ -22,6 +22,7 @@ public class CircleDaoImpl implements CircleDAO {
 		// TODO Auto-generated method stub
 		try {
 			circle.setCircleCreationDate();
+			circle.setCircleStatus("A");
 			sessionFactory.getCurrentSession().save(circle);
 			return true;
 		} catch (Exception e) {
