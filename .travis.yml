@@ -4,8 +4,8 @@ services:
   - mysql
 
 before_install:
-  - mysql -e 'CREATE DATABASE springboot;'
-  
+  - mysql -e 'CREATE DATABASE applicationex;'
+
 cache:
   directories:
     - '$HOME/.m2/repository'  
