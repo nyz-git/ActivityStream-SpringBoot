@@ -2,6 +2,10 @@ language: java
 
 services:
   - mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE springboot;'
+  
 cache:
   directories:
     - '$HOME/.m2/repository'  
